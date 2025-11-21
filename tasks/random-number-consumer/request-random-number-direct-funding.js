@@ -30,11 +30,11 @@ task(
             "RandomNumberDirectFundingConsumerV2"
         )
 
-        //Get signer information
+        // Get signer information
         const accounts = await hre.ethers.getSigners()
         const signer = accounts[0]
 
-        //Create connection to VRF Contract and call the getRandomNumber function
+        // Create connection to VRF Contract and call the getRandomNumber function
         const vrfConsumerContractV2 = await RandomNumberConsumerV2.attach(contractAddr, signer)
 
         const transaction = await vrfConsumerContractV2.requestRandomWords(

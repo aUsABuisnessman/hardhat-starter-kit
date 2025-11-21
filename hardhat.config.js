@@ -23,7 +23,7 @@ const SEPOLIA_RPC_URL = process.env.SEPOLIA_RPC_URL
 const AMOY_RPC_URL =
     process.env.AMOY_RPC_URL || "https://polygon-amoy.infura.io/v3/your-api-key"
 const PRIVATE_KEY = process.env.PRIVATE_KEY
-// optional
+// Optional: mnemonic for wallet generation
 const MNEMONIC = process.env.MNEMONIC || "Your mnemonic"
 const FORKING_BLOCK_NUMBER = parseInt(process.env.FORKING_BLOCK_NUMBER) || 0
 
