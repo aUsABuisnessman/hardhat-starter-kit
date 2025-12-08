@@ -48,7 +48,7 @@ contract AutomationCounter is AutomationCompatibleInterface {
     function performUpkeep(
         bytes calldata /* performData */
     ) external override {
-        //We highly recommend revalidating the upkeep in the performUpkeep function
+        // We highly recommend revalidating the upkeep in the performUpkeep function
         (bool upkeepNeeded, ) = checkUpkeep("");
         require(upkeepNeeded, "Time interval not met");
         lastTimeStamp = block.timestamp;
